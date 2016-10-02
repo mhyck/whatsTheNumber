@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<!-- google fonts -->
+
+	<!-- font awesome -->
+	<script src="https://use.fontawesome.com/33adcd4c82.js"></script>
+	<!-- favorite icon -->
+	<link rel="favorite Icon" href="img/favicon.ico">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- animate css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- title -->
+	<title>GUESSING GAME</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 col-lg-10 col-lg-offset-1">
+				<!-- form to collect user data -->
+				<form id="form" onSubmit="return false">
+					<div class="form-group">
+						<h1 class="text-center">GUESS A NUMBER<br>BETWEEN<br>1 - 100</h1>
+						<p id="guesses"></p>
+					</div>
+					<div class="form-group">
+						<input id="userGuess" onkeypress="if (event.keyCode == 13)
+                        document.getElementById('btn').click()"  " class="form-control" type="number" autofocus>
+					</div>
+					<div class="form-group">
+						<button id="btn" class="btn btn-primary btn-block" type="button" onclick="determineGuess()">Take a Guess</button>
+						<button id="resBtn" class="btn btn-primary btn-block" type="button" onclick="location.reload()">Reset</button>
+					</div>
+
+					<!-- results -->
+					<div id="results"></div>
+				</form>				
+			</div>
+		</div>
+	</div>
+
+	<div id="results"></div>
+
+
+	<!-- bootstrap and javascript -->
+	<script src="js/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
